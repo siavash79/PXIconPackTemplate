@@ -1,4 +1,5 @@
 
+
 # Pixel Xpert Icon Pack Template
 
 The official icon pack template from the team, for every prospective/current developer who wishes to create a new Icon Pack for Pixel Xpert!
@@ -65,8 +66,9 @@ First item, (in this example`mapping_drawables`) references the drawables name i
 
 Start adding some drawables to your pack. You can add them in the [drawable](app/src/main/res/drawable) folder. Make sure to name them in the same order as the `mapping_drawables` and `mapping_replacement` in the previous step.
 
-The icons you can modify in your icon pack are those in use by [Android Framework](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/res/res/drawable/), [SystemUI](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SystemUI/res/drawable/), [Settings](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/res/drawable/), [SettingsLib](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SettingsLib/res/drawable/) (used in SystemUI & Settings apps), [Keyguard](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SystemUI/res-keyguard/drawable/) and those injected by [PixelXpert](https://github.com/siavash79/PixelXpert/tree/canary/app/src/main/res/drawable) in SystemUI (like VoLTE icon).  
-Note: When referring to framework icons, you MUST mention `android:` before the resource name (example: `<item>android:ic_wifi_signal_0</item>`)
+The icons you can modify in your icon pack are those in use by [Android Framework](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/res/res/drawable/), [SystemUI](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SystemUI/res/drawable/)(Note 1), [Settings](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/res/drawable/), [SettingsLib](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SettingsLib/res/drawable/) (used in SystemUI & Settings apps), [Keyguard](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SystemUI/res-keyguard/drawable/) and those injected by [PixelXpert](https://github.com/siavash79/PixelXpert/tree/canary/app/src/main/res/drawable) in SystemUI (like VoLTE icon) (Note 2).  
+Note 1: When referring to framework icons, you MUST mention `android:` before the resource name (example: `<item>android:ic_wifi_signal_0</item>`)
+Note 2: To replace the icons injected by PixelXpert into systemUI, add `module:` before the resource name (example: `<item>module:ic_volte</item>`)
 
 
 ## Step 5: Compile and test your pack!
