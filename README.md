@@ -1,3 +1,4 @@
+
 # Pixel Xpert Icon Pack Template
 
 The official icon pack template from the team, for every prospective/current developer who wishes to create a new Icon Pack for Pixel Xpert!
@@ -36,6 +37,7 @@ Now add a new Activity: this will be your pack. (NOTE: you can have more than on
 
 In the `android:name` attribute, replace `pack_name` with the string attribute of your pack (only english and no spaces) This will be the reference of the icon pack in the next step.
 In the `android:label` attribute, replace `Your Icon Pack` with the name of your pack (this can be any language and can have spaces)
+Note: Optionally, you can pack multiple icon packs in one apk. To do so, you should make multiple copies of the `<activity>` block and give them different names
 
 ## Step 3: Start adding pack information!
 
@@ -46,7 +48,7 @@ Open up [strings.xml](app/src/main/res/values/strings.xml) and create a new stri
 This will be your name as the author of the pack.
 
 Open up [arrays.xml](app/src/main/res/values/arrays.xml) and create a new string-array with the reference of your pack (the `pack_name` attribute from the previous step)
-Something like that:
+Something like:
 
 ```xml
 <string-array name="pack_name">
@@ -57,11 +59,15 @@ Something like that:
 
 Here, `mapping_drawables` and `mapping_replacement` are the references of the pack. You can have as many items as you want in the string-array, but make sure to have at least one item and both of them must have the same size.
 
-`mapping_drawables` references the drawables name in the package you want to override (eg: `ic_alarm`), and `mapping_replacement` references the drawables name in your pack (eg: `ic_alarm`)
+First item, (in this example`mapping_drawables`) references the drawables name in the package you want to override (eg: `ic_alarm`), and second item (in this example `mapping_replacement`) references the drawables name in your pack (eg: `ic_alarm_filled`)
 
 ## Step 4: Adding your icons!
 
 Start adding some drawables to your pack. You can add them in the [drawable](app/src/main/res/drawable) folder. Make sure to name them in the same order as the `mapping_drawables` and `mapping_replacement` in the previous step.
+
+The icons you can modify in your icon pack are those in use by [Android Framework](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/res/res/drawable/), [SystemUI](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SystemUI/res/drawable/), [Settings](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/res/drawable/), [SettingsLib](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SettingsLib/res/drawable/) (used in SystemUI & Settings apps), [Keyguard](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SystemUI/res-keyguard/drawable/) and those injected by [PixelXpert](https://github.com/siavash79/PixelXpert/tree/canary/app/src/main/res/drawable) in SystemUI (like VoLTE icon).  
+Note: When referring to framework icons, you MUST mention `android:` before the resource name (example: `<item>android:ic_wifi_signal_0</item>`)
+
 
 ## Step 5: Compile and test your pack!
 
