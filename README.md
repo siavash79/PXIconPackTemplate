@@ -24,6 +24,14 @@ applicationId = "com.yourname.packname"
 
 ## Step 2: Start adding your packs
 Open up [AndroidManifest.xml](app/src/main/AndroidManifest.xml) and look for the `<application>` tag.
+
+Add the meta-data for author name
+```xml
+<meta-data
+            android:name="packauthor"
+            android:value="Siavash" />
+```
+
 Now add a new Activity: this will be your pack. (NOTE: you can have more than one pack in a single app)
 ```xml
 <activity android:name="pack_name"
@@ -41,12 +49,6 @@ In the `android:label` attribute, replace `Your Icon Pack` with the name of your
 Note: Optionally, you can pack multiple icon packs in one apk. To do so, you should make multiple copies of the `<activity>` block and give them different names
 
 ## Step 3: Start adding pack information!
-
-Open up [strings.xml](app/src/main/res/values/strings.xml) and create a new string for pack author name.
-```xml
-<string name="pack_author">Your Name</string>
-```
-This will be your name as the author of the pack.
 
 Open up [arrays.xml](app/src/main/res/values/arrays.xml) and create a new string-array with the reference of your pack (the `pack_name` attribute from the previous step)
 Something like:
