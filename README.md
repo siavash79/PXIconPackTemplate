@@ -25,6 +25,13 @@ applicationId = "com.yourname.packname"
 ## Step 2: Start adding your packs
 Open up [AndroidManifest.xml](app/src/main/AndroidManifest.xml) and look for the `<application>` tag.
 
+Insert yor app name in the `android:label` attribute
+```xml
+<application
+android:label="Icon Pack Collection"
+android:supportsRtl="true">
+```
+
 Add the meta-data for author name
 ```xml
 <meta-data
