@@ -31,6 +31,7 @@ Insert yor app name in the `android:label` attribute
 android:label="Icon Pack Collection"
 android:supportsRtl="true">
 ```
+In the `android:label` attribute, replace `Icon Pack Collection` with the name of you pack.
 
 Add the meta-data for author name
 ```xml
@@ -38,6 +39,7 @@ Add the meta-data for author name
             android:name="packauthor"
             android:value="Siavash" />
 ```
+In the `android:value` attribute, replace `Siavash` with the author's name.
 
 Now add a new Activity: this will be your pack. (NOTE: you can have more than one pack in a single app)
 ```xml
