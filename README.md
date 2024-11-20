@@ -28,8 +28,8 @@ Open up [AndroidManifest.xml](app/src/main/AndroidManifest.xml) and look for the
 Insert yor app name in the `android:label` attribute
 ```xml
 <application
-android:label="Icon Pack Collection"
-android:supportsRtl="true">
+    android:label="Icon Pack Collection"
+    android:supportsRtl="true">
 ```
 In the `android:label` attribute, replace `Icon Pack Collection` with the name of you pack.
 
