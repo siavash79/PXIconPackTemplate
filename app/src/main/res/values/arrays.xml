@@ -6,6 +6,11 @@
         <item>replacement</item> <!-- second item must be the name of replacement resource names array -->
     </string-array>
 
+    <string-array name="iconpack2"> <!-- iconpack name, matching the activity name mentioned in manifest -->
+        <item>mapping_source</item> <!-- first item must be the name of original resource names array -->
+        <item>replacement_test</item> <!-- second item must be the name of replacement resource names array -->
+    </string-array>
+
     <!-- original resource names -->
     <string-array name="mapping_source"> <!-- This is where we list the icons we target for change -->
         <item>android:ic_wifi_signal_0</item> <!-- framekwork icons MUST start with 'android:' -->
