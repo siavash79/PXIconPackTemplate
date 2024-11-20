@@ -78,6 +78,15 @@ Note 2: To replace the icons injected by PixelXpert into systemUI, add `module:`
 Now you can compile your pack and test it on your device. If everything is working as expected, you can see the new pack in [Pixel Xpert](https://github.com/siavash79/PixelXpert)!
 
 ### Now what?
+
 Nothing. Now you're set to publish your icon pack!
+
+## Notes
+
+# Deploy on mobile
+
+Remember to select Launch Activity - Nothing in the run configuration before deploying the app on your device.
+
+<img src=".github/resources/studio.png" width="90%" alt="banner" />
 
 ## Written with ❤ from Pixel Xpert team!
